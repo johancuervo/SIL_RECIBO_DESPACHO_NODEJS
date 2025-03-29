@@ -1,0 +1,72 @@
+[
+  {
+    "idProducto": "PROD-789456",
+    "sku": "SKU-123456",
+    "descripcion": "Caja de herramientas multifuncional",
+    "categoria": "Ferretería",
+    "codigoBarras": "7501234567890",
+    "peso": 2.5,
+    "volumen": 0.015,
+    "cantidad": 50,
+    "packQuantity": 5,
+    "fechaRecepcion": "2025-03-27T10:30:00Z",
+    "estado": "Recibido",
+    "observaciones": "Caja en buen estado, sin daños visibles"
+  },
+  {
+    "idProducto": "PROD-654321",
+    "sku": "SKU-654321",
+    "descripcion": "Laptop ultradelgada 15''",
+    "categoria": "Electrónica",
+    "codigoBarras": "7506543219876",
+    "peso": 1.8,
+    "volumen": 0.010,
+    "cantidad": 30,
+    "packQuantity": 1,
+    "fechaRecepcion": "2025-03-26T14:20:00Z",
+    "estado": "Pendiente",
+    "observaciones": "Falta revisión de especificaciones"
+  },
+  {
+    "idProducto": "PROD-987654",
+    "sku": "SKU-987654",
+    "descripcion": "Silla ergonómica de oficina",
+    "categoria": "Muebles",
+    "codigoBarras": "7509876543210",
+    "peso": 12.5,
+    "volumen": 0.150,
+    "cantidad": 20,
+    "packQuantity": 2,
+    "fechaRecepcion": "2025-03-25T09:45:00Z",
+    "estado": "Recibido",
+    "observaciones": "Algunas cajas presentan rasgaduras leves"
+  },
+  {
+    "idProducto": "PROD-112233",
+    "sku": "SKU-112233",
+    "descripcion": "Teléfono inteligente 128GB",
+    "categoria": "Electrónica",
+    "codigoBarras": "7501122334455",
+    "peso": 0.5,
+    "volumen": 0.002,
+    "cantidad": 100,
+    "packQuantity": 10,
+    "fechaRecepcion": "2025-03-24T16:00:00Z",
+    "estado": "En revisión",
+    "observaciones": "Revisión de componentes en proceso"
+  },
+  {
+    "idProducto": "PROD-445566",
+    "sku": "SKU-445566",
+    "descripcion": "Pintura acrílica blanca 1L",
+    "categoria": "Construcción",
+    "codigoBarras": "7504455667788",
+    "peso": 1.2,
+    "volumen": 0.003,
+    "cantidad": 75,
+    "packQuantity": 5,
+    "fechaRecepcion": "2025-03-23T11:15:00Z",
+    "estado": "Recibido",
+    "observaciones": "Verificar fecha de caducidad"
+  }
+]
