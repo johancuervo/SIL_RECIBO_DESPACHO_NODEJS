@@ -91,4 +91,3 @@ Las contribuciones son bienvenidas. Por favor, abre un issue o un pull request c
 Licencia
 
 MIT
-
