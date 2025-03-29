@@ -31,6 +31,7 @@ const swaggerSpec = swaggerJSDoc(options);
 
 const setupSwagger = (app) => {
   app.use("/swagger", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
+  
 };
 
 export default setupSwagger;
