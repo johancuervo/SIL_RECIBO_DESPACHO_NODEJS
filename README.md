@@ -1,50 +1,57 @@
-API de Recepción y Despacho - Centro de Distribución
+# API de Recepción y Despacho - Centro de Distribución
 
-Descripción
+## Descripción
 
 Esta API permite gestionar el proceso de recepción y despacho de productos en un centro de distribución. Proporciona endpoints para registrar la recepción de productos, gestionar inventarios y coordinar el despacho de órdenes.
 
-Tecnologías
+---
 
-Lenguaje: JavaScript
+## Tecnologías
 
-Framework: Express
+- **Lenguaje:** JavaScript
+- **Framework:** Express
+- **Base de Datos:** PostgreSQL
+- **Autenticación:** JWT
+- **Arquitectura:** REST
 
-Base de Datos: PostgreSQL
+---
 
-Autenticación: JWT
+## Endpoints Principales
 
-Arquitectura: REST
+### 1. Autenticación
 
-Endpoints Principales
+#### Login
 
-1. Autenticación
+**POST** `/api/auth/login`
 
-Login
-
-POST /api/auth/login
-
+```json
 {
   "username": "usuario",
   "password": "contraseña"
 }
+```
 
-Registro de Usuario
+#### Registro de Usuario
 
-POST /api/auth/register
+**POST** `/api/auth/register`
 
+```json
 {
   "username": "nuevo_usuario",
   "password": "contraseña",
   "role": "admin"
 }
+```
 
-2. Recepción de Productos
+---
 
-Registrar Recepción
+### 2. Recepción de Productos
 
-POST /api/Recibo/ReciboProductos
+#### Registrar Recepción
 
+**POST** `/api/Recibo/ReciboProductos`
+
+```json
 {
   "sku": "SKU-112233",
   "descripcion": "Teléfono inteligente 128GB",
@@ -58,36 +65,53 @@ POST /api/Recibo/ReciboProductos
   "estado": "En revisión",
   "observaciones": "Revisión de componentes en proceso"
 }
+```
 
-3. Despacho de Productos
+---
 
-Obtener Despacho por ID
+### 3. Despacho de Productos
 
-GET /api/Despacho/Shipments/{id}
+#### Obtener Despacho por ID
 
-Instalación
+**GET** `/api/Despacho/Shipments/{id}`
 
-Clonar el repositorio:
+---
 
-git clone https://github.com/tuusuario/api-centro-distribucion.git
-cd api-centro-distribucion
+## Instalación
 
-Instalar dependencias:
+1. **Clonar el repositorio:**
 
-npm install
+   ```bash
+   git clone https://github.com/tuusuario/api-centro-distribucion.git
+   cd api-centro-distribucion
+   ```
 
-Configurar variables de entorno:
+2. **Instalar dependencias:**
 
-cp .env.example .env
+   ```bash
+   npm install
+   ```
 
-Ejecutar el servidor:
+3. **Configurar variables de entorno:**
 
-npm start
+   ```bash
+   cp .env.example .env
+   ```
 
-Contribuciones
+4. **Ejecutar el servidor:**
+
+   ```bash
+   npm start
+   ```
+
+---
+
+## Contribuciones
 
 Las contribuciones son bienvenidas. Por favor, abre un issue o un pull request con tus mejoras.
 
-Licencia
+---
+
+## Licencia
 
 MIT
