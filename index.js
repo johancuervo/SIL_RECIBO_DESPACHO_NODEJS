@@ -4,6 +4,7 @@ import { corsMiddleware } from "./middleware/cors.js";
 import setupSwagger from "./config/swagger.js";
 import cookieParser from 'cookie-parser'
 export const createApp = ({ gestionModel }) => {
+
   const app = express();
   app.use(cookieParser());
   app.use(express.static("public"));

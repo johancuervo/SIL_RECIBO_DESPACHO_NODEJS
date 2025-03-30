@@ -1,6 +1,5 @@
 import connectDB from "../db/db.js";
 import bcrypt from 'bcrypt'
-import { SALT_ROUNDS } from '../../config/config.js'
 const db = await connectDB();
 export class GestionModel {
   static async getAll() {
@@ -90,9 +89,9 @@ export class GestionModel {
     Validation.password(password);
     // Asegurarnos que el usuario no exista
     const user = await db.collection("Users").findOne({ username: username });
-    console.log(user)
+      console.log(user)
     if (user) throw new Error("username alredy exists");
-    const hasdedPassword = await bcrypt.hash(password, SALT_ROUNDS);
+    const hasdedPassword = await bcrypt.hash(password, 10);
     const result = await db.collection("Users").insertOne({
       username,
       password: hasdedPassword,

@@ -1,6 +1,6 @@
 import { validateProduct } from "../../Sheme/product.js";
 import jwt from 'jsonwebtoken'
-import {SECRET_JWT_KEY } from '../../config/config.js'
+import 'dotenv/config';
 export class GestionController {
   constructor({ gestionModel }) {
     this.gestionModel = gestionModel;
@@ -39,7 +39,7 @@ export class GestionController {
     const { username, password } = req.body
     try {
       const user = await this.gestionModel.login({ username, password })
-      const token = jwt.sign({ id: user.id, username: user.username }, SECRET_JWT_KEY, {
+      const token = jwt.sign({ id: user.id, username: user.username }, process.env.SECRET_JWT_KEY, {
         expiresIn: '1h'
       })
       res.cookie('access_token', token, {
