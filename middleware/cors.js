@@ -5,12 +5,13 @@ const ACCEPTED_ORIGINS = [
   "http://localhost:1234",
   "https://localhost:1234",
   "https://sil-recibo-despacho-nodejs-f4t3apttd-johancuervos-projects.vercel.app",
-  "https://sil-recibo-despacho-nodejs-mcsd8ab8l-johancuervos-projects.vercel.app"
+  "https://sil-recibo-despacho-nodejs-mcsd8ab8l-johancuervos-projects.vercel.app",
+  "sil-recibo-despacho-nodejs-dos111eat-johancuervos-projects.vercel.app"
 ];
-export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) =>
+export const corsMiddleware = ({ acceptedOrigins = '*' } = {}) =>
   cors({
     origin: (origin, callback) => {
-      if (acceptedOrigins.includes(origin)) {
+      if (acceptedOrigins === '*' || acceptedOrigins.includes(origin)) {
         return callback(null, true);
       }
       if (!origin) {
@@ -18,6 +19,7 @@ export const corsMiddleware = ({ acceptedOrigins = ACCEPTED_ORIGINS } = {}) =>
       }
       return callback(new Error("Not allowed by CORS"));
     },
+    methods: ["GET", "POST", "PUT", "DELETE"],
   });
 
 export const decrypt = (encryptedText, secretKey) => {
