@@ -1,6 +1,12 @@
 import {MongoClient} from 'mongodb'
-
-const uri = "mongodb+srv://CUEM02:C1udadJarab3@cluster0.xkb5dba.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+import { decrypt } from '../../middleware/cors.js';
+import dotenv from "dotenv";
+import 'dotenv/config';
+dotenv.config();
+if (!process.env?.DATABASE_URL || !process.env?.SECRET_KEY) {
+  throw new Error("❌ Missing required environment variables: DATABASE_URL or SECRET_KEY");
+}
+const uri = decrypt(process.env.DATABASE_URL,process.env.SECRET_KEY);
 const client = new MongoClient(uri);
 
 async function connectDB() {

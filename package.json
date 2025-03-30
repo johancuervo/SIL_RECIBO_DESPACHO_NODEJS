@@ -5,22 +5,26 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start":"node server-with-mongo.js",
-    "build":"",
-    "start:mongo": "node --watch server-with-mongo.js",
-    "start:local": "node --watch server-with-local.js",
+    "start": "node server.js",
+    "build": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
     "cors": "2.8.5",
+    "dotenv": "^16.4.7",
     "express": "4.19.2",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.15.0",
     "mongoose": "^8.13.0",
     "mysql2": "^3.11.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
+    "yamljs": "^0.3.0",
     "zod": "3.23.8"
   }
 }
