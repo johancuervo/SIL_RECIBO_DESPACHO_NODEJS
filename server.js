@@ -1,3 +1,3 @@
 import { createApp } from "./index.js";
-import { ProductModel } from "./models/productos/product.js";
-createApp({ productModel: ProductModel});
+import { GestionModel } from "./models/gestion/gestion.js";
+createApp({ gestionModel: GestionModel});

@@ -12,12 +12,20 @@ const options = {
       },
       tags: [
         {
-          name: "Recibo", // Nombre del grupo en Swagger UI
+          name: "Productos", // Nombre del grupo en Swagger UI
           description: "Endpoints relacionados con la gestión de productos",
         },
         {
+          name: "Recibo", // Nombre del grupo en Swagger UI
+          description: "Endpoints relacionados con la gestión del Recibo",
+        },
+        {
           name: "Despacho", // Nombre del grupo en Swagger UI
-          description: "Endpoints relacionados con la gestión de productos",
+          description: "Endpoints relacionados con la gestión del despacho",
+        },
+        {
+          name: "Usuarios", // Nombre del grupo en Swagger UI
+          description: "Endpoints relacionados con la gestión de los usuarios",
         }
       ],
       paths: {
