@@ -92,11 +92,16 @@ Esta API permite gestionar el proceso de recepción y despacho de productos en u
    npm install
    ```
 
-3. **Configurar variables de entorno:**
+2. Configurar variables de entorno:
 
-   ```bash
-   cp .env.example .env
-   ```
+    Crear un archivo `.env` con las siguientes variables:
+
+    ```env
+    SALT_ROUNDS=<10>
+    SECRET_JWT_KEY=<key>
+    SECRET_KEY=<keysecret>
+    DATABASE_URL=<mongodb+srv://usuario:password@cluster.mongodb.net/nombreBD>
+    ```
 
 4. **Ejecutar el servidor:**
 
