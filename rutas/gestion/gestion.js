@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { UsuarioController } from "../../controllers/gestion/usuario.controller.js";
+import { UsuarioController } from "../../controllers/usuario.controller.js";
 import { ReciboController } from "../../controllers/recibo.controller.js";
 import { InventarioController } from "../../controllers/inventario.controller.js";
-import { DespachoController } from "../../controllers/gestion/despacho.controller.js";
+import { DespachoController } from "../../controllers/despacho.controller.js";
 export const gestionRouter = ({ reciboModel,inventarioModel,usuarioModel,despachoModel }) => {
   const gestionRouter = Router();
   const reciboController=new ReciboController({reciboModel});

@@ -1,6 +1,3 @@
-import jwt from 'jsonwebtoken'
-import 'dotenv/config';
-import { validarUsuario } from "../../esquemas/usuarios.js";
 export class DespachoController {
   constructor({ despachoModel }) {
     this.despachoModel = despachoModel;

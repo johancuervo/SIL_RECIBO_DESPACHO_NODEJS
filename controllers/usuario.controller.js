@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
 import 'dotenv/config';
-import { validarUsuario } from "../../esquemas/usuarios.js";
+import { validarUsuario } from "../esquemas/usuarios.js";
 export class UsuarioController {
   constructor({ usuarioModel }) {
     this.usuarioModel = usuarioModel;
