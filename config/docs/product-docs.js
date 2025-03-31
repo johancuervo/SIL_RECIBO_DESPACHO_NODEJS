@@ -50,7 +50,7 @@ const productDocs = {
       },
     },
   },
-  "/api/Usuarios/Register/": {
+  "/api/Usuarios/Registro/": {
     post: {
       tags: ["Usuarios"],
       summary: "Registrar un nuevo usuario",
@@ -214,23 +214,23 @@ const productDocs = {
       },
     },
   },
-  "/api/Despacho/Shipments/{id}": {
+  "/api/Despacho/Orden/{id}": {
     get: {
       tags: ["Despacho"],
-      summary: "Obtiene el estado de un shipment",
-      description: "Devuelve el estado de un shipment de acuerdo a su id",
+      summary: "Obtiene el estado de una orden despachada",
+      description: "Devuelve el estado de una orden de acuerdo a su id",
       parameters: [
         {
           name: "id",
           in: "path",
           required: true,
-          description: "ID del shipment",
-          schema: { type: "string", example: "SHIP-12345" },
+          description: "ID de la orden",
+          schema: { type: "string", example: "OD-20250328-003" },
         },
       ],
       responses: {
         200: {
-          description: "Shipment encontrado",
+          description: "Orden encontrada",
           content: {
             "application/json": {
               schema: {

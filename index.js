@@ -1,9 +1,9 @@
 import express, { json } from "express";
-import { gestionRouter } from "./routes/gestion/gestion.js";
+import { gestionRouter } from "./rutas/gestion/gestion.js";
 import { corsMiddleware } from "./middleware/cors.js";
 import setupSwagger from "./config/swagger.js";
 import cookieParser from 'cookie-parser'
-export const createApp = ({ gestionModel }) => {
+export const createApp = ({ reciboModel,inventarioModel,usuarioModel,despachoModel }) => {
 
   const app = express();
   app.use(express.json());
@@ -13,7 +13,7 @@ export const createApp = ({ gestionModel }) => {
   app.use(corsMiddleware());
   app.disable("x-powered-by");
 
-  app.use("/api", gestionRouter({ gestionModel }));
+  app.use("/api", gestionRouter({ reciboModel,inventarioModel,usuarioModel,despachoModel }));
   setupSwagger(app);
   app.get("/", (req, res) => {
     res.redirect("/swagger");
