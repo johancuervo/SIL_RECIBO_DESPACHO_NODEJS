@@ -97,10 +97,10 @@ Esta API permite gestionar el proceso de recepción y despacho de productos en u
     Crear un archivo `.env` con las siguientes variables:
 
     ```env
-    SALT_ROUNDS=10
-    SECRET_JWT_KEY=WMS
-    SECRET_KEY=keysecret
-    DATABASE_URL=mongodb+srv://usuario:password@cluster.mongodb.net/nombreBD
+    SALT_ROUNDS=<10>
+    SECRET_JWT_KEY=<key>
+    SECRET_KEY=<keysecret>
+    DATABASE_URL=<mongodb+srv://usuario:password@cluster.mongodb.net/nombreBD>
     ```
 
 4. **Ejecutar el servidor:**
