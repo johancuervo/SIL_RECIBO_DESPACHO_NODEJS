@@ -38,8 +38,7 @@ Esta API permite gestionar el proceso de recepción y despacho de productos en u
 ```json
 {
   "username": "nuevo_usuario",
-  "password": "contraseña",
-  "role": "admin"
+  "password": "contraseña"
 }
 ```
 
